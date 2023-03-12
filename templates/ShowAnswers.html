@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADC - Answers</title>
+    <link rel="stylesheet" href="/static/Navbar.css">
+    <style>
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: rgba(0, 218, 222, 0.192);
+
+            background-color: white;
+            background-color: aliceblue;
+        }
+
+        .answerContainer {
+            width: 99.7%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            width: 720px;
+            margin-top: 30px;
+            background-color: white;
+            border-radius: 30px;
+            padding: 15px 15px;
+            /* 3d */
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+
+        .card-content {
+            border: 2px solid rgba(0, 38, 255, 0.315);
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card-content>p {
+            margin-top: 2em;
+            width: 95%;
+            font-size: 1.4rem;
+            font-weight: 600;
+            padding: 5px;
+        }
+
+        .btns-box {
+            width: 90%;
+            height: 65px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+
+        .ans-btn {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile {
+            width: 70px;
+            border-radius: 100%;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, .1),
+                0 1px 6px rgba(0, 0, 0, .05),
+                0 8px 8px rgba(0, 0, 0, .1),
+                0 16px 16px rgba(0, 0, 0, .1),
+                8px 16px 16px rgba(0, 0, 0, .15),
+                rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+                rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+            background-position: center;
+            background-size: cover;
+        }
+
+        .element--hover {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1rem;
+            color: #fff;
+            color: black;
+            font-weight: bolder;
+
+            background-color: #fdeffb;
+            background-color: #f5a6e8;
+            background-color: #377FBF;
+            background-color: #73b9fa65;
+
+
+            padding: 1rem 2rem;
+            border-radius: 8rem;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+
+        .element--hover {
+            cursor: pointer;
+            transition: box-shadow 600ms cubic-bezier(.33, .11, .02, .99),
+                transform 600ms cubic-bezier(.33, .11, .02, .99);
+        }
+
+        .element--hover:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+                rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset,
+                0 4px 4px rgba(0, 0, 0, .1),
+                0 1px 6px rgba(173, 54, 54, 0.05),
+                0 8px 8px rgba(0, 0, 0, .1),
+                0 16px 16px rgba(0, 0, 0, .15),
+                8px 32px 32px rgba(0, 0, 0, .2);
+            transform: scale(1.05) translateY(-0.5rem);
+        }
+
+        .element--hover:active {
+            box-shadow: 0 4px 4px rgba(0, 0, 0, .1),
+                0 1px 6px rgba(0, 0, 0, .05),
+                0 8px 8px rgba(0, 0, 0, .1),
+                0 16px 16px rgba(0, 0, 0, .1),
+                8px 16px 16px rgba(0, 0, 0, .15);
+            /* 8px 32px 32px rgba(0, 0, 0, .15);  */
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+                rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset,
+                0 4px 4px rgba(0, 0, 0, .1),
+                0 1px 6px rgba(0, 0, 0, .05),
+                0 8px 8px rgba(0, 0, 0, .1);
+        }
+
+        .answer-card {
+            width: 720px;
+            margin-top: 80px;
+            background-color: white;
+            border-radius: 30px;
+            padding: 15px 15px;
+            /* 3d */
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+
+        .answer-card-content {
+            border: 0.2px solid rgb(17, 228, 63);
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .answer-card-content h1 {
+            margin-top: 13px;
+            margin-bottom: 5px;
+            font-size: 2rem;
+            width: 90%;
+        }
+
+        .answer-card-content p {
+            width: 86%;
+            margin-top: 5px;
+            margin-bottom: 13px;
+            padding: 8px;
+            font-size: 1.18rem;
+        }
+
+        hr {
+            width: 80%;
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/f97c0f6cbf.js" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="/static/footer.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h1>ADC</h1>
+        </div>
+        <div class="menu">
+            <a href="/" class="home hover">Home</a>
+            <a href="/home" class="questions hover">Questions</a>
+            <a href="/" class="About hover">About Us</a>
+        </div>
+        <div class="SL">
+            <!-- <div class="hover">SignUp</div> -->
+            <a href="/question" class="hover">Ask Question</a>
+        </div>
+    </nav>
+
+    <div class="spacer"></div>
+
+    <div class="answerContainer">
+        <div class="card">
+            <div class="card-content">
+                <p>
+                    {{ques}}
+                </p>
+                <div class="btns-box">
+                    <div class="ans-btn">
+
+                            <button class="element--hover add" id="create-answer">
+                                <em class="fas fa-plus"></em> Add Answer
+                            </button>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: none;">
+           <form action="/addans" method="post" id="formm">
+           {%csrf_token%}
+               <input type="text" name="ques_no">
+           </form>
+        </div>
+        {% for answer in answers %}
+        <div class="answer-card">
+            <div class="answer-card-content">
+                <h1>Answer</h1>
+                <hr>
+                <p>
+                    {{answer.answer}}<br>
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <footer>
+        <div class="main">
+            <img src="/static/img.jpg" alt="" />
+            <div class="info">
+                <div class="box-1">
+                    <div class="connect">Let's connect!</div>
+                    <div class="sub-box-1">
+                        <input type="email" name="Your e-mail" id="" placeholder="Write your e-mail here" />
+                        <div class="btn element--hover">Submit</div>
+                    </div>
+                </div>
+                <div class="box-2">
+                    <div class="about">
+                        <div class="about1">About</div>
+                        <div class="about2">
+                            ADC is the knowledge-sharing community where 4 students have
+                            put their heads together to develope their toughest homework.
+                        </div>
+                    </div>
+                    <div class="contact">Contact</div>
+                    <div class="policy">
+                        <div class="pp1">Privacy Policy</div>
+                        <div class="pp2">
+                            <ul>
+                                <li>
+                                    Be polite and considerate of everyone participating in the
+                                    discussion.
+                                </li>
+                                <li>
+                                    Don't spam, spoil things, flood chat with CAPS, or
+                                    line-split.
+                                </li>
+                                <li>
+                                    Avoid inappropriate activities such as threatening,
+                                    stalking, insulting, abusing, impersonating, cruelty,
+                                    self-harm, and/or anything discriminatory.
+                                </li>
+                                <li>
+                                    Do not discuss sensitive topics such as Religion or
+                                    Politics.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-3">
+                    <div class="resrv">
+                        <p class="rights">All Rights Reserved ​ ​ ​&copy ​2022-23</p>
+                    </div>
+                    <div class="logo">
+                        <a href="https://github.com/ADC" target="_blank"><i
+                                class="fab fa-github-square fa-2x"></i></a>
+
+                        <!-- <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-linkedin-in"></i> -->
+                    </div>
+                    <div class="ADC">Designed by ADC</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+</body>
+   <script>
+        function myfunc()
+        {
+            formobj=document.forms['formm'];
+            formobj.elements["ques_no"].value ="{{ques_no}}";
+            formobj.submit();
+        }
+        document.querySelector("#create-answer").addEventListener('click',myfunc);
+    </script>
+</html>

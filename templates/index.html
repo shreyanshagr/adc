@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADC - Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap"
+      rel="stylesheet"
+      />
+    <script
+      src="https://kit.fontawesome.com/f97c0f6cbf.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/static/card.css">
+    <link rel="stylesheet" href="/static/signup.css" />
+    <link rel="stylesheet" href="/static/Login.css" />
+    <link rel="stylesheet" href="/static/Navbar.css" />
+    <link rel="stylesheet" href="/static/footer.css" />
+    <link rel="stylesheet" href="/static/home.css" />
+
+    <style>
+      nav{
+         background-color: rgba(255, 255, 255, 0.774);
+      }
+      .hover{
+        background-color: white;
+      }
+      .circle_back{
+        width: 60px;
+        z-index: 4;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+      footer{
+        bottom: -500px;
+        /* margin-top: -44px; */
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Home page -->
+    <header id="Home" class="temp">
+      <!-- <div class="wrapper">
+  <div class="logo">
+      <img src="ADC.png" alt="">
+  </div>
+<ul class="nav-area">
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Sign Up</a></li>
+<li><a href="#">Portfolio</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div> -->
+      
+
+      <nav>
+          <div class="logo">
+              <h1>ADC</h1>
+          </div>
+          <div class="menu">
+                  <a href="/" class="home hover">Home</a>
+                  <a href="/home" class="questions hover" id="ask_questions">Questions</a>
+                  <a href="/" class="About hover">About Us</a>
+          </div>
+          <div class="SL">
+            <div href="" id="homesignup" class="hover">SignUp</div>
+            <div href="" id="homelogin" class="hover">Login</div>
+          </div>
+      </nav>
+      <div class="welcome-text">
+          <h1>
+              Welcome to <br><span>ADC</span></h1>
+          <a href="card.html" id="mainbtn">Questions &rarr;</a>
+      </div>
+      <footer>
+        <div class="main">
+          <img src="/static/img.jpg" alt="" />
+          <div class="info">
+            <div class="box-1">
+              <div class="connect">Let's connect!</div>
+              <div class="sub-box-1">
+                <input
+                  type="email"
+                  name="Your e-mail"
+                  id=""
+                  placeholder="Write your e-mail here"
+                />
+                <div class="btn element--hover">Submit</div>
+              </div>
+            </div>
+            <div class="box-2">
+              <div class="about">
+                <div class="about1">About</div>
+                <div class="about2">
+                  ADC is the knowledge-sharing community where 4 students have
+                  put their heads together to develope their toughest homework.
+                </div>
+              </div>
+              <div class="contact">Contact</div>
+              <div class="policy">
+                <div class="pp1">Privacy Policy</div>
+                <div class="pp2">
+                  <ul>
+                    <li>
+                      Be polite and considerate of everyone participating in the
+                      discussion.
+                    </li>
+                    <li>
+                      Don't spam, spoil things, flood chat with CAPS, or
+                      line-split.
+                    </li>
+                    <li>
+                      Avoid inappropriate activities such as threatening,
+                      stalking, insulting, abusing, impersonating, cruelty,
+                      self-harm, and/or anything discriminatory.
+                    </li>
+                    <li>
+                      Do not discuss sensitive topics such as Religion or
+                      Politics.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="box-3">
+              <div class="resrv">
+                <p class="rights">All Rights Reserved ​ ​ ​&copy ​2022-23</p>
+              </div>
+              <div class="logo">
+                <a href="https://github.com/ADC" target="_blank"
+                  ><i class="fab fa-github-square fa-2x"></i
+                ></a>
+  
+                <!-- <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-linkedin-in"></i> -->
+              </div>
+              <div class="ADC">Designed by ADC</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </header>
+
+    <!-- login page -->
+    <div class="login-page hide" id="login-page">
+      <div class="circle_back" id="back1"><img src="https://img.icons8.com/nolan/50/circled-left-2.png"/> </div>
+      <!-- random boxes -->
+      <div class="R4"></div>
+      <div class="R-box" id="R1"></div>
+      <div class="R-box" id="R2"></div>
+      <!-- login-box -->
+      <div class="login-box">
+
+        <h1>Login</h1>
+
+        <!-- form -->
+        <form action="formlogin" method="POST">
+        {%csrf_token%}
+
+          <!-- Username -->
+          <div class="text">
+            <label for="Login_username">Username</label>
+            <div class="text1">
+              <em class="fas fa-user"></em>
+              <input 
+                class="text-size effect-remover" 
+                type="text" 
+                id="Login_username"
+                placeholder="Enter your email" 
+                name="username"
+              />
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div class="text" id="login_password_box">
+            <label for="login_password" class="gg">Password
+              <div class="invalid-msg" id="invalid-msg" style=" display: none;">*Password incomplete</div>
+            </label>
+            <div class="text2">
+              <em class="fas fa-lock"></em>
+              <input class="text-size effect-remover" type="password" id="login_password"
+              placeholder="Enter your password" name="password"/>
+            </div>
+          </div>
+
+          <!-- forgot -->
+          <div class="forget"><a>Forgot Password?</a></div>
+          <div class="login-btn">
+            <input type="submit" value="LOGIN" />
+          </div>
+
+          <!-- icon btn sign in -->
+          <div class="sign_up">Or Sign In Using</div>
+          <div id="img1">
+            <div class="img">
+              <a href="https://www.facebook.com/"><img src="/static/facebook.png" alt=""
+                  /></a>
+              <a href="https://twitter.com/"><img src="/static/twitter.png" alt=""
+                  /></a>
+              <a href="https://mail.google.com/"><img src="/static/google.png" alt=""
+                  /></a>
+              <!-- <button><img src="facebook.png" alt="" /></button>
+              <button><img src="twitter.jpg" alt="" /></button>
+              <button><img src="google.png" alt="" /></button> -->
+            </div>
+          </div>
+
+
+          <div class="spacer"></div>
+          <div class="sign_up">
+            Create an account
+            <!-- <button class="btn" id="SPbtn">SIGN UP</button> -->
+            <div class="btn" id="SPbtn">SIGN UP</div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Signup page -->
+    <div class="signup-page hide" id="signup-page">
+      <div class="circle_back" id="back2"><img src="https://img.icons8.com/nolan/50/circled-left-2.png"/> </div>
+      <!-- random boxes -->
+
+      <div class="R4"></div>
+      <div class="R-box" id="R1"></div>
+      <div class="R-box" id="R2"></div>
+      <!-- Signup-box -->
+      <div class="signup-box">
+        <h1>Sign Up</h1>
+
+        <!-- form -->
+        <form action="formsignup" method="POST"> {% csrf_token %}
+          <!-- Username -->
+          <div class="text">
+            <label for="username">UserName</label>
+            <div class="text1">
+              <em class="fas fa-user"></em>
+              <input
+              class="text-size effect-remover"
+              type="text"
+              id="username"
+              placeholder="Full Name"
+              name="username"
+              />
+            </div>
+          </div>
+          
+          <!-- email address -->
+          <div class="text">
+            <label for="email">Email</label>
+            <div class="text2">
+              <em class="fas fa-envelope"></em>
+              <input
+              class="text-size effect-remover"
+              type="email"
+              id="email"
+              placeholder="Email"
+              name="email"
+              />
+            </div>
+          </div>
+          
+          <!-- Password -->
+          <div class="text" id="signup_password_box">
+            <label for="password">Password
+              <div class="invalid-msg" id="signup-invalid" style="font-size: 15px; display: none;">*</div>
+            </label>
+            <div class="text3">
+              <em class="fas fa-lock"></em>
+              <input
+              class="text-size effect-remover"
+              type="password"
+              id="password"
+              placeholder="Password"
+              name="password"
+              />
+            </div>
+          </div>
+          <div class="signup-invalid-msg" id="password_suggestion" style="display: none;">
+            <div class="triangle"></div>
+            <!-- <em class="fas fa-lock"></em> -->
+            Password must include:
+              <li>Atleast 8 characters long</li>
+              <li>Use 1 or more numbers</li>
+              <li>Use atleast one special symbol</li>
+            
+          </div>
+          
+          <!-- Confirm Password -->
+          <div class="text" id="confirm_password_box">
+            <label for="confirm_password">Confirm Password
+              <div class="invalid-msg" id="err_msg" style="display: none;">*Password doesn't match</div>
+            </label>
+            <div class="text3">
+              <em class="fas fa-unlock"></em>
+              <input
+                class="text-size effect-remover"
+                type="password"
+                id="confirm_password"
+                placeholder="Confirm Password"
+                />
+            </div>
+          </div>
+          <div class="spacers"></div>
+
+          <!-- Sign up button -->
+          <div class="signup-btn">
+            <input type="submit" value="SIGN UP" />
+          </div>
+
+          <br>
+          <!-- Terms and policy -->
+          <div class="TnP">
+            By Signing up, you agree to our
+            <a href="" class="terms">Terms of Use</a> and
+            <!-- <em class="terms">Terms of Use</em> and -->
+            <a href="" class="policy">Privacy Policy</a>
+            <!-- <em class="policy">Privacy Policy</em> -->
+          </div>
+          
+          <!-- For login -->
+          
+        </form>
+        <div class="log_in">
+          Already have an account?
+          <div class="btn" id="login_btn">LOG IN</div>
+        </div>
+      </div>
+    </div>
+
+    
+    
+  </body>
+  <script>
+    // console.log("Check");
+    let signUpPg=document.getElementById("signup-page");
+    let loginInPg=document.getElementById("login-page");
+    
+    // Signup Btn
+    let homesignup=document.getElementById("homesignup");
+    let Home=document.getElementById("Home");
+    homesignup.addEventListener("click",function(){
+      Home.classList.add("hide");
+      signUpPg.classList.remove("hide");
+    });
+    let homelogin=document.getElementById("homelogin");
+    homelogin.addEventListener("click",()=>{
+      Home.classList.add("hide");
+      loginInPg.classList.remove("hide");
+    });
+    let back1=document.getElementById("back1");
+    back1.addEventListener("click",()=>{
+      Home.classList.remove("hide");
+      loginInPg.classList.add("hide");
+    });
+    let back2=document.getElementById("back2");
+    back2.addEventListener("click",()=>{
+      Home.classList.remove("hide");
+      signUpPg.classList.add("hide");
+    });
+    let mainbtn=document.getElementById("mainbtn");
+    let ask_questions=document.getElementById("ask_questions");
+    mainbtn.addEventListener("click",()=>{
+      Home.classList.add("hide");
+      signUpPg.classList.remove("hide");
+    })
+    ask_questions.addEventListener("click",()=>{
+      Home.classList.add("hide");
+      signUpPg.classList.remove("hide");
+    })
+
+// switches to SignUP Page
+let signUpbtn=document.getElementById("SPbtn");
+signUpbtn.addEventListener("click",function(){
+    passwordSuggest();
+    loginInPg.classList.add("hide");
+    signUpPg.classList.remove("hide");
+});
+
+
+// switches to Login Page
+let loginbtn=document.getElementById("login_btn");
+loginbtn.addEventListener("click",function(){
+    checkingPassword();
+    loginInPg.classList.remove("hide");
+    signUpPg.classList.add("hide");
+});
+
+// Checking login Page
+function checkingPassword(){
+    bar.classList.remove("invalid");
+    msg.style.display="none";
+}
+let loginPassword=document.getElementById("login_password");
+let bar=document.getElementById("login_password_box");
+let msg=document.getElementById("invalid-msg");
+loginPassword.addEventListener("click",checkingPassword);
+loginPassword.addEventListener("blur",()=>{
+    let pss=loginPassword.value;
+    if(pss.length<8){
+        bar.classList.add("invalid");
+        msg.style.display="inline-block";
+    }
+
+});
+
+// Checking SignUP Page
+function passwordSuggest(){
+    signupPasswordBar.classList.remove("invalid");
+        passwordSugg.style.display="none";
+        signupInvalid.style.display="none";
+}
+let signupPassword=document.getElementById("password");
+let signupPasswordBar=document.getElementById("signup_password_box");
+let passwordSugg=document.getElementById("password_suggestion");
+let signupInvalid=document.getElementById("signup-invalid");
+
+signupPassword.addEventListener("click",passwordSuggest);
+
+signupPassword.addEventListener("blur",function(){
+    let regex=/(?=.*[~!@#$%&])(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9!@#$%]{8,}/gm;
+    if(!regex.test(signupPassword.value)){
+        signupPasswordBar.classList.add("invalid");
+        passwordSugg.style.display="block";
+        signupInvalid.style.display="inline-block";
+    }
+});
+
+// confirm Password check
+let confirmPassword=document.getElementById("confirm_password");
+let confirmPasswordBar=document.getElementById("confirm_password_box");
+let errmsg=document.getElementById("err_msg");
+
+function confirmPasswordError(){
+    confirmPasswordBar.classList.remove("invalid");
+    errmsg.style.display="none";
+}
+confirmPassword.addEventListener("click",confirmPasswordError);
+confirmPassword.addEventListener("blur",function(){
+    let pass=document.getElementById("password");
+    if(pass.value !== confirmPassword.value){
+        confirmPasswordBar.classList.add("invalid");
+        errmsg.style.display="inline-block";
+    }
+    else{
+        confirmPasswordBar.classList.remove("invalid");
+        errmsg.style.display="none";
+    }
+});
+
+let remover=document.querySelectorAll(".effect-remover");
+remover.forEach((e,i)=>{
+    e.addEventListener("click",function(){
+        let PH=e.placeholder;
+        remover[i].placeholder="";
+        console.log(remover[i].placeholder);
+        e.addEventListener("blur",function(){
+            e.placeholder=PH;
+        });
+    })
+})
+  </script>
+</html>

@@ -1,0 +1,233 @@
+*{
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.login-page {
+  font-family: "Noto Sans JP", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  padding: 0;
+/*   background: rgb(155, 27, 235);
+  background: linear-gradient(
+    149deg,
+    rgba(155, 27, 235, 1) 19%,
+    rgba(27, 84, 235, 1) 30%,
+    rgba(63, 35, 223, 0.9447129193474265) 66%,
+    rgba(146, 24, 217, 1) 84%
+  ); */
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  background: rgb(0,218,222);
+background: linear-gradient(45deg, rgba(0,218,222,1) 0%, rgba(215,11,228,1) 70%);
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  height: 670px;
+  border: 3px solid aliceblue;
+  border-radius: 10px;
+  background-color: aliceblue;
+  box-shadow: 1px 1px 15px rgb(69, 49, 124);
+}
+.login-box h1 {
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 30px;
+}
+.login-box form {
+  padding: 0 40px;
+}
+form .text {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 20px 0px;
+}
+.text input {
+  display: flex;
+  width: 100%;
+  padding: 0 10px;
+  height: 30px;
+  /* font-weight: bold; */
+  /* border: 2px solid black; */
+  border: none;
+  background: none;
+  outline: none;
+}
+.text input:hover {
+  pointer-events: fill;
+}
+.text1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.forget {
+  text-align: right;
+  margin: -17px 0 20px 5px;
+  color: #adadad;
+  cursor: pointer;
+}
+.forget a:hover {
+  text-decoration: underline;
+  color: black;
+}
+input[type="submit"] {
+  width: 100%;
+  height: 40px;
+  font-size: large;
+  border: 1px solid;
+  border-radius: 120px;
+  font-weight: bolder;
+  color: aliceblue;
+  cursor: pointer;
+/*   background: rgb(155, 27, 235);
+  background: linear-gradient(
+    149deg,
+    rgba(155, 27, 235, 1) 19%,
+    rgba(27, 84, 235, 1) 30%,
+    rgba(63, 35, 223, 0.9447129193474265) 66%,
+    rgba(146, 24, 217, 1) 84%
+  ); */
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  background: rgb(0,218,222);
+background: linear-gradient(45deg, rgba(0,218,222,1) 0%, rgba(215,11,228,1) 81%);
+}
+.login-btn{
+  height: 45px;
+  display: flex;
+  justify-content: center;
+}
+input[type="submit"]:hover {
+  
+  /* transition-duration: 0.1s; */
+  /* width: 103%;
+  height: 42px; */
+  border: 0px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.555);
+}
+#img1 {
+  /* border: 2px solid black; */
+  margin: 0px auto;
+  width: 50%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+}
+.img {
+  /* border: 2px solid yellow; */
+  display: flex;
+}
+.img img {
+  flex-direction: row;
+  align-items: center;
+  width: 70%;
+  /* border: 2px solid red; */
+  border-radius: 20px;
+  display: block;
+  margin: 0px;
+}
+.img a img:hover {
+  /* display: flex; */
+  /* align-items: center; */
+  /* border: 2px solid rgb(104, 71, 224); */
+  border-radius: 100px;
+  box-shadow: 1px 1px 3px #181618;
+}
+.spacer {
+  height: 110px;
+}
+.sign_up {
+  margin: 20px;
+  font-size: smaller;
+  text-align: center;
+}
+.sign_up div {
+  color: rgba(27, 84, 235, 1);
+  margin: 5px;
+  padding: 5px;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.sign_up div:hover {
+  /* border: 2px solid black; */
+  color: rgb(211, 4, 238);
+  font-weight: 400;
+
+  /* font-size: 15px; */
+  /* box-shadow: 1px 1px 5px #530153; */
+}
+
+/* .text-size{
+  font-size: 15px;
+} */
+
+.R-box{
+  position: relative;
+}
+#R1{
+  height: 500px;
+  width: 500px;
+  background-color: rgba(255, 255, 255, 0.089);
+  border-radius: 20px;
+  transform: rotateZ(57deg);
+  bottom: -100px;
+  left: 120px;
+}
+#R2{
+  height: 600px;
+  width: 600px;
+  background-color: rgba(114, 114, 114, 0.192);
+  border-radius: 20px;
+  transform: rotateZ(37deg);
+  right: -1300px;
+  top: -900px;
+}
+.R4{
+  height: 500px;
+  width: 500px;
+  background-color: rgba(255, 255, 255, 0.089);
+  border-radius: 20px;
+  transform: rotateZ(57deg);
+  position: relative;
+  top: -320px;
+  right: 300px;
+}
+.hide{
+  display: none;
+}
+form .invalid{
+  border-bottom: 2px solid red;
+
+}
+form .invalid-msg{
+  color: red;
+  font-size: 11px;
+  display: inline-block;
+  position: relative;
+  top: -5px;
+}
+
